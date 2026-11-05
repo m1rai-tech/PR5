@@ -25,7 +25,7 @@ function render() {
     }
   });
 
-  document.title = `${routes[route]} — Incompetech Mix`;
+  document.title = `${routes[route]} — VasyaPlayer`;
 }
 
 window.addEventListener('hashchange', render);
@@ -49,14 +49,28 @@ const audio = document.querySelector('audio');
 const rows = document.querySelectorAll('.tracks tbody tr');
 const nowTitle = document.querySelector('.now-title');
 const nowCover = document.querySelector('.now-cover');
+const tiCover = document.querySelector('.ti-cover');
+const tiTitle = document.querySelector('.ti-title');
+const tiGenre = document.querySelector('.ti-genre');
+const tiBpm = document.querySelector('.ti-bpm');
+const tiYear = document.querySelector('.ti-year');
 
 rows.forEach((row) => {
   row.addEventListener('click', () => {
     rows.forEach((r) => r.classList.remove('active'));
     row.classList.add('active');
+
+    const title = row.querySelector('.title').textContent;
+    const seed = row.querySelector('img').src.match(/seed\/(\w+)/)[1];
+
     audio.src = row.dataset.src;
-    nowTitle.textContent = row.querySelector('.title').textContent;
+    nowTitle.textContent = title;
     nowCover.src = row.querySelector('img').src;
+    tiTitle.textContent = title;
+    tiCover.src = `https://picsum.photos/seed/${seed}/400/400.webp`;
+    tiGenre.textContent = row.dataset.genre;
+    tiBpm.textContent = row.dataset.bpm;
+    tiYear.textContent = row.dataset.year;
     audio.play();
   });
 
