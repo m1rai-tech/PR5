@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — VasyaPlayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#catalog" class="logo" aria-label="VasyaPlayer — на головну">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#1ed760"/>
+        <path d="M15 12v16l13-8z" fill="#000"/>
+      </svg>
+      <span>VasyaPlayer</span>
+    </a>
+
+    <nav class="nav" aria-label="Розділи">
+      <a href="#catalog" class="nav-link">Каталог</a>
+      <a href="#details" class="nav-link">Про альбом</a>
+      <a href="#feedback" class="nav-link">Відгуки</a>
+    </nav>
+
+    <p class="timer">Сесія <span class="timer-value">00:00</span></p>
+  </header>
+
+  <div class="layout">
+  <aside class="sidebar" aria-label="Бібліотека">
+    <div class="side-head">
+      <h3>Моя бібліотека</h3>
+      <button type="button" class="add-btn" aria-label="Створити плейлист">+</button>
+    </div>
+    <ul class="chips"><li>Плейлисти</li><li>Альбоми</li><li>Виконавці</li></ul>
+    <ul class="lib">
+        <li class="lib-item"><img src="https://picsum.photos/seed/fav/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Улюблені треки</p><p class="lib-sub">Плейлист • 48 пісень</p></div></li>
+        <li class="lib-item"><img src="https://picsum.photos/seed/study/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Для навчання</p><p class="lib-sub">Плейлист • 32 пісні</p></div></li>
+        <li class="lib-item"><img src="https://picsum.photos/seed/lofi/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Lo-Fi вечір</p><p class="lib-sub">Плейлист • 21 пісня</p></div></li>
+        <li class="lib-item"><img src="https://picsum.photos/seed/games/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Ігрові саундтреки</p><p class="lib-sub">Плейлист • 64 пісні</p></div></li>
+        <li class="lib-item"><img src="https://picsum.photos/seed/coffee/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Ранкова кава</p><p class="lib-sub">Плейлист • 17 пісень</p></div></li>
+        <li class="lib-item"><img src="https://picsum.photos/seed/kevin/96/96.webp" width="48" height="48" loading="lazy" alt=""><div><p class="lib-title">Kevin MacLeod</p><p class="lib-sub">Виконавець</p></div></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <section id="catalog" class="view" aria-labelledby="catalog-title">
+      <div class="hero">
+        <img class="cover"
+             src="https://picsum.photos/seed/album/600/600.webp"
+             srcset="https://picsum.photos/seed/album/300/300.webp 300w,
+                     https://picsum.photos/seed/album/600/600.webp 600w"
+             sizes="(max-width: 700px) 60vw, 200px"
+             width="600" height="600" loading="lazy"
+             alt="Обкладинка альбому Incompetech Mix">
+        <div>
+          <p class="badge">Альбом</p>
+          <h1 id="catalog-title">Incompetech Mix</h1>
+          <p class="meta"><b>Kevin MacLeod</b> • 6 пісень</p>
+        </div>
+      </div>
+
+      <table class="tracks">
+        <caption class="visually-hidden">Трек-лист</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" colspan="2">Назва</th>
+            <th scope="col">Час</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="active" data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Monkeys%20Spinning%20Monkeys.mp3" data-genre="Comedy" data-bpm="100" data-year="2014"><td>1</td><td class="col-img"><img src="https://picsum.photos/seed/t1/80/80.webp" width="40" height="40" loading="lazy" alt="Monkeys Spinning Monkeys"></td><td><span class="title">Monkeys Spinning Monkeys</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+          <tr data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sneaky%20Snitch.mp3" data-genre="Comedy" data-bpm="110" data-year="2009"><td>2</td><td class="col-img"><img src="https://picsum.photos/seed/t2/80/80.webp" width="40" height="40" loading="lazy" alt="Sneaky Snitch"></td><td><span class="title">Sneaky Snitch</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+          <tr data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluffing%20a%20Duck.mp3" data-genre="Comedy" data-bpm="120" data-year="2016"><td>3</td><td class="col-img"><img src="https://picsum.photos/seed/t3/80/80.webp" width="40" height="40" loading="lazy" alt="Fluffing a Duck"></td><td><span class="title">Fluffing a Duck</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+          <tr data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3" data-genre="Jazz" data-bpm="98" data-year="2014"><td>4</td><td class="col-img"><img src="https://picsum.photos/seed/t4/80/80.webp" width="40" height="40" loading="lazy" alt="Carefree"></td><td><span class="title">Carefree</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+          <tr data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3" data-genre="Electronica" data-bpm="92" data-year="2011"><td>5</td><td class="col-img"><img src="https://picsum.photos/seed/t5/80/80.webp" width="40" height="40" loading="lazy" alt="Wallpaper"></td><td><span class="title">Wallpaper</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+          <tr data-src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Investigations.mp3" data-genre="Mystery" data-bpm="104" data-year="2010"><td>6</td><td class="col-img"><img src="https://picsum.photos/seed/t6/80/80.webp" width="40" height="40" loading="lazy" alt="Investigations"></td><td><span class="title">Investigations</span><span class="artist">Kevin MacLeod</span></td><td class="time">--:--</td></tr>
+        </tbody>
+      </table>
+
+      <div class="block">
+        <div class="block-head"><h3>Більше від Kevin MacLeod</h3><a href="#catalog" class="see-all">Усі</a></div>
+        <ul class="cards">
+          <li class="card">
+            <img src="https://picsum.photos/seed/al1/300/300.webp" width="300" height="300" loading="lazy" alt="Cipher">
+            <p class="card-title">Cipher</p>
+            <p class="card-sub">Electronica</p>
+          </li>
+          <li class="card">
+            <img src="https://picsum.photos/seed/al2/300/300.webp" width="300" height="300" loading="lazy" alt="Funk Game Loop">
+            <p class="card-title">Funk Game Loop</p>
+            <p class="card-sub">Funk</p>
+          </li>
+          <li class="card">
+            <img src="https://picsum.photos/seed/al3/300/300.webp" width="300" height="300" loading="lazy" alt="Local Forecast">
+            <p class="card-title">Local Forecast</p>
+            <p class="card-sub">Jazz</p>
+          </li>
+          <li class="card">
+            <img src="https://picsum.photos/seed/al4/300/300.webp" width="300" height="300" loading="lazy" alt="Pixel Peeker">
+            <p class="card-title">Pixel Peeker</p>
+            <p class="card-sub">Chiptune</p>
+          </li>
+          <li class="card">
+            <img src="https://picsum.photos/seed/al5/300/300.webp" width="300" height="300" loading="lazy" alt="Volatile Reaction">
+            <p class="card-title">Volatile Reaction</p>
+            <p class="card-sub">Rock</p>
+          </li>
+          <li class="card">
+            <img src="https://picsum.photos/seed/al6/300/300.webp" width="300" height="300" loading="lazy" alt="Hall of the Mountain King">
+            <p class="card-title">Hall of the Mountain King</p>
+            <p class="card-sub">Classical</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <div class="block-head"><h3>Схожі виконавці</h3><a href="#catalog" class="see-all">Усі</a></div>
+        <ul class="cards artists">
+          <li class="artist-card">
+            <img src="https://picsum.photos/seed/ar1/200/200.webp" width="120" height="120" loading="lazy" alt="Bensound">
+            <p class="card-title">Bensound</p>
+            <p class="card-sub">Виконавець</p>
+          </li>
+          <li class="artist-card">
+            <img src="https://picsum.photos/seed/ar2/200/200.webp" width="120" height="120" loading="lazy" alt="Jason Shaw">
+            <p class="card-title">Jason Shaw</p>
+            <p class="card-sub">Виконавець</p>
+          </li>
+          <li class="artist-card">
+            <img src="https://picsum.photos/seed/ar3/200/200.webp" width="120" height="120" loading="lazy" alt="Chris Haugen">
+            <p class="card-title">Chris Haugen</p>
+            <p class="card-sub">Виконавець</p>
+          </li>
+          <li class="artist-card">
+            <img src="https://picsum.photos/seed/ar4/200/200.webp" width="120" height="120" loading="lazy" alt="Silent Partner">
+            <p class="card-title">Silent Partner</p>
+            <p class="card-sub">Виконавець</p>
+          </li>
+          <li class="artist-card">
+            <img src="https://picsum.photos/seed/ar5/200/200.webp" width="120" height="120" loading="lazy" alt="Audionautix">
+            <p class="card-title">Audionautix</p>
+            <p class="card-sub">Виконавець</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="details" class="view is-hidden" aria-labelledby="details-title">
+      <h2 id="details-title">Про альбом</h2>
+      <p class="lead">Добірка відомих інструментальних треків Kevin MacLeod — композитора, чию музику безкоштовно використовують у відео, іграх і подкастах.</p>
+
+      <table class="spec">
+        <caption class="visually-hidden">Специфікація альбому</caption>
+        <tbody>
+          <tr><th scope="row">Виконавець</th><td>Kevin MacLeod</td></tr>
+          <tr><th scope="row">Кількість треків</th><td>6</td></tr>
+          <tr><th scope="row">Жанри</th><td>Comedy, Jazz, Electronica</td></tr>
+          <tr><th scope="row">Джерело</th><td><a href="https://incompetech.com" target="_blank" rel="noopener">incompetech.com</a></td></tr>
+          <tr><th scope="row">Ліцензія</th><td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></td></tr>
+        </tbody>
+      </table>
+
+      <ul class="stats">
+        <li><b>2 000+</b><span>треків у каталозі</span></li>
+        <li><b>1.2 млн</b><span>слухачів на місяць</span></li>
+        <li><b>25 років</b><span>на сцені</span></li>
+        <li><b>4.8</b><span>середня оцінка</span></li>
+      </ul>
+
+      <div class="block">
+        <h3>Теги</h3>
+        <ul class="tags">
+          <li>Royalty Free</li><li>Comedy</li><li>Jazz</li><li>Lo-Fi</li><li>Ambient</li><li>Для відео</li><li>Для ігор</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="feedback" class="view is-hidden" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">Відгуки <span class="reviews-count">3</span></h2>
+
+      <div class="rating">
+        <p class="rating-score">4.8</p>
+        <div>
+          <p class="stars" aria-label="Оцінка 4.8 з 5">★★★★★</p>
+          <p class="card-sub">на основі 312 оцінок</p>
+        </div>
+      </div>
+
+      <form class="review-form" novalidate>
+        <div class="field">
+          <label for="name">Ім'я</label>
+          <input id="name" name="name" type="text" placeholder="Ваше ім'я">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="text">Відгук</label>
+          <textarea id="text" name="text" rows="3" maxlength="300" placeholder="Що думаєте про альбом?"></textarea>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <button type="submit" class="btn">Надіслати</button>
+      </form>
+
+      <ul class="review-list">
+        <li class="review"><p class="review-author">Олена</p><p>Слухаю Monkeys Spinning Monkeys кожного ранку, настрій одразу кращий.</p></li>
+        <li class="review"><p class="review-author">Максим</p><p>Sneaky Snitch ідеально лягає під монтаж відео. Дякую за добірку!</p></li>
+        <li class="review"><p class="review-author">Ірина</p><p>Зручний плеєр, музика не зупиняється, коли гортаєш розділи.</p></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <aside class="track-info" aria-label="Інформація про трек">
+    <p class="ti-label">Зараз грає</p>
+    <img class="ti-cover" src="https://picsum.photos/seed/t1/400/400.webp" width="400" height="400" loading="lazy" alt="">
+    <p class="ti-title">Monkeys Spinning Monkeys</p>
+    <p class="ti-artist">Kevin MacLeod</p>
+
+    <dl class="ti-meta">
+      <div><dt>Жанр</dt><dd class="ti-genre">Comedy</dd></div>
+      <div><dt>BPM</dt><dd class="ti-bpm">100</dd></div>
+      <div><dt>Рік</dt><dd class="ti-year">2014</dd></div>
+      <div><dt>Ліцензія</dt><dd>CC BY 4.0</dd></div>
+    </dl>
+
+    <div class="ti-card">
+      <p class="ti-card-title">Про виконавця</p>
+      <p class="card-sub">Kevin MacLeod — американський композитор, автор понад 2000 безкоштовних треків для відео, ігор і подкастів.</p>
+    </div>
+
+    <div class="ti-card">
+      <p class="ti-card-title">Далі в черзі</p>
+      <p class="card-sub">Sneaky Snitch • Kevin MacLeod</p>
+    </div>
+  </aside>
+</div>
+
+  <footer class="player">
+    <img class="now-cover" src="https://picsum.photos/seed/t1/80/80.webp" width="56" height="56" alt="">
+    <div class="now">
+      <p class="now-title">Monkeys Spinning Monkeys</p>
+      <p class="now-artist">Kevin MacLeod</p>
+    </div>
+    <audio controls preload="metadata" aria-label="Аудіоплеєр">
+      <source src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Monkeys%20Spinning%20Monkeys.mp3" type="audio/mpeg">
+      Ваш браузер не підтримує audio.
+    </audio>
+  </footer>
+
+</body>
+</html>
